@@ -16,8 +16,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <spring.version>5.2.2.RELEASE</spring.version>
+    <springframework.version>5.2.1.RELEASE</springframework.version>
+    <spring-security.version>5.2.1.RELEASE</spring-security.version>
   </properties>
+  <!-- гарантированно нет конфликта между springframework.version 5.0.2 и  spring-security.version 5.0.0-->
 
   <dependencies>
     <dependency>
@@ -29,7 +31,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>${spring.version}</version>
+      <version>${springframework.version}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
@@ -52,6 +54,19 @@
       <version>1.2</version>
     </dependency>
 
+    <!-- add spring-security-web and spring-security-config -->
+    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${spring-security.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
