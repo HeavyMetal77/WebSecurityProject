@@ -80,6 +80,12 @@
 							</div>
 						</div>
 
+						<!-- при использовании тегов form:form spring автоматически добавляет проверку на
+						CSRF - Cross Site Request Forgery (CSRF) - Подделка межсайтовых запросов:
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+						если использовать простой тег html <form> следует обязательно добавить указанную строку,
+						значения которой будут  генерироваться для каждой сессии-->
+
 					</form:form>
 
 				</div>
