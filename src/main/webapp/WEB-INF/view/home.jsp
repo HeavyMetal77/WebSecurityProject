@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: heavy
@@ -13,6 +14,13 @@
 <body>
     <h2>Home Page</h2>
     <hr>
-    Welcome Home Page!
+    <p>Welcome Home Page!</p>
+
+<hr>
+
+    <form:form action="${pageContext.request.contextPath}/logout" method="POST">
+        <input type="submit" value="Logout"/>
+    </form:form>
+
 </body>
 </html>
