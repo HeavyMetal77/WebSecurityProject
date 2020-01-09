@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: heavy
@@ -15,6 +17,17 @@
     <h2>Home Page</h2>
     <hr>
     <p>Welcome Home Page!</p>
+
+    <hr>
+    <p>
+    User: <security:authentication property="principal.username"/>
+    <br><br>
+    Role(s): <security:authentication property="principal.authorities"/>
+    </p>
+
+    <hr>
+    <p><a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a> (only for managers)</p>
+    <p><a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a> (only for admins)</p>
 
 <hr>
 
