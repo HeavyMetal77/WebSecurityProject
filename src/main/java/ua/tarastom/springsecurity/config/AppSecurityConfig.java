@@ -36,7 +36,9 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                     .permitAll()
                 .and()
                     .logout()
-                    .permitAll();
+                    .permitAll()
+                .and()
+                .exceptionHandling().accessDeniedPage("/access-denied");
     }
 }
 
