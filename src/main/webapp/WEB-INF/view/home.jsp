@@ -25,9 +25,13 @@
     Role(s): <security:authentication property="principal.authorities"/>
     </p>
 
-    <hr>
+    <security:authorize access="hasRole('MANAGER')"> <!--ссылка будет видна только для указанной роли -->
     <p><a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a> (only for managers)</p>
+    </security:authorize>
+
+    <security:authorize access="hasRole('ADMIN')">
     <p><a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a> (only for admins)</p>
+    </security:authorize>
 
 <hr>
 
