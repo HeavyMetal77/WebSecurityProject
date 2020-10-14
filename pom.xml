@@ -16,8 +16,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <springframework.version>5.2.1.RELEASE</springframework.version>
-    <spring-security.version>5.2.1.RELEASE</spring-security.version>
+    <springframework.version>5.2.9.RELEASE</springframework.version>
+    <spring-security.version>5.2.9.RELEASE</spring-security.version>
   </properties>
   <!-- гарантированно нет конфликта между springframework.version 5.0.2 и  spring-security.version 5.0.0-->
 
@@ -25,7 +25,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
